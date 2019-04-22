@@ -15,8 +15,26 @@
   overflow: hidden;
   z-index: -2; }
 
-head {
-  position: fixed; }
+.header {
+  position: fixed;
+  display: none;
+  z-index: 3;
+  background-color: #0e1106;
+  opacity: 0.95;
+  width: 50%;
+  height: 100vh;
+  top: 0px;
+  right: 0px;
+  padding-top: 20vh; }
+  .header.close {
+    display: block; }
+  .header .li-item a {
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none; }
+    .header .li-item a:hover {
+      color: #d7b134; }
 
 main {
   padding: 15px;
@@ -35,3 +53,68 @@ main {
   .icons a i:hover {
     color: #d7b134;
     transition: all 0.2s ease-in; }
+
+.btn-meniu {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  z-index: 5;
+  cursor: pointer; }
+  .btn-meniu .btn-meniu-item {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px; }
+    .btn-meniu .btn-meniu-item.close:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 6px);
+      transition: 0.2s; }
+    .btn-meniu .btn-meniu-item.close:nth-child(2) {
+      display: none; }
+    .btn-meniu .btn-meniu-item.close:nth-child(3) {
+      transform: rotate(-45deg);
+      transition: 0.2s; }
+
+embed {
+  width: 90vw;
+  height: 80vh; }
+
+.main-me {
+  display: flex;
+  align-self: center;
+  justify-content: center; }
+  .main-me .imgPortf {
+    height: 40vh;
+    margin: 15px;
+    opacity: 0.4; }
+  .main-me p {
+    text-align: justify;
+    font-size: 18px; }
+    .main-me p span {
+      color: #d7b134; }
+
+.work {
+  margin: 0px;
+  padding: 0%; }
+  .work .main-work {
+    display: flex;
+    flex-direction: column; }
+    .work .main-work .row {
+      display: flex;
+      flex-direction: row; }
+      .work .main-work .row .work-img {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        border: 3px double #d7b134;
+        border-radius: 15px;
+        margin: 25px; }
+        .work .main-work .row .work-img img {
+          width: 100px;
+          margin: 8px;
+          border-radius: 10px; }
+          .work .main-work .row .work-img img:hover {
+            width: 105px; }
+        .work .main-work .row .work-img a {
+          text-align: center;
+          font-size: 16px;
+          text-decoration: none; }
